@@ -14,7 +14,7 @@ int main()
 
     if (units>400)
     {
-        fprice += (units-sub)*32.50 + 5000;
+        fprice += (units-400)*32.50 + 5000;
     }else if (units>300)
     {
         fprice += (units - sub) * 21.50 + 2850;
