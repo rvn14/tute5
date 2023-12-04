@@ -23,24 +23,39 @@ int main()
     scanf("%d %d %d", &jobnum, &levelnum, &basicsal);
 
 
-    if (levelnum == 1)
-    {
-        grosssal = basicsal + (0.25*basicsal) + L1CA + L1EA;
-    }
-    else if (levelnum == 2)
-    {
-        grosssal = basicsal + (0.25 * basicsal) + L2CA + L2EA;
-    }
-    else if (levelnum == 3)
-    {
-        grosssal = basicsal + (0.25 * basicsal) + L3CA + L3EA;
-    }
-    else if (levelnum == 4) 
-    {
-        grosssal = basicsal + (0.25 * basicsal) + L4CA + L4EA;
-    }
-  
+    // if (levelnum == 1)
+    // {
+    //     grosssal = basicsal + (0.25*basicsal) + L1CA + L1EA;
+    // }
+    // else if (levelnum == 2)
+    // {
+    //     grosssal = basicsal + (0.25 * basicsal) + L2CA + L2EA;
+    // }
+    // else if (levelnum == 3)
+    // {
+    //     grosssal = basicsal + (0.25 * basicsal) + L3CA + L3EA;
+    // }
+    // else if (levelnum == 4) 
+    // {
+    //     grosssal = basicsal + (0.25 * basicsal) + L4CA + L4EA;
+    // }
 
+    switch (levelnum)
+    {
+    case 1:
+        grosssal = basicsal + (0.25 * basicsal) + L1CA + L1EA;
+        break;
+    case 2:
+        grosssal = basicsal + (0.25 * basicsal) + L2CA + L2EA;
+        break;
+    case 3:
+        grosssal = basicsal + (0.25 * basicsal) + L3CA + L3EA;
+        break;
+    case 4:
+        grosssal = basicsal + (0.25 * basicsal) + L4CA + L4EA;
+        break;
+
+    }
 
     if (grosssal < 2000)
     {
