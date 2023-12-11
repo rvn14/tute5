@@ -38,11 +38,27 @@ int main()
         }
         else
         {
+            switch (tenderedAmount)
+            {
+            case 50:
+                coinCount[0] ++;
+                break;
+            case 25:
+                coinCount[1] ++;
+                break;
+            case 10:
+                coinCount[2] ++;
+                break;
+            case 5:
+                coinCount[3] ++;
+                break;
+                        }
+
             dispensedStamp = stampValue;
             switch (dispensedStamp)
             {
             case 25:
-                stampCount[0]-1;
+                stampCount[0] - 1;
                 break;
             case 15:
                 stampCount[1] - 1;
@@ -69,19 +85,29 @@ int main()
                     switch (coins[i])
                     {
                     case 50:
-                        coinCount[0] - 1;
+                        coinCount[0] --;
                         break;
                     case 25:
-                        coinCount[1] - 1;
+                        coinCount[1] --;
                         break;
-                    case 15:
-                        coinCount[2] - 1;
+                    case 10:
+                        coinCount[2] --;
                         break;
                     case 5:
-                        coinCount[3] - 1;
+                        coinCount[3] --;
                         break;
                     }
+
+                    
             }
+
+            
+            
+        }
+        printf("\n");
+        for (int i = 0; i < 4; i++)
+        {
+            printf("\n%d Coin count: %d", coins[i], coinCount[i]);
         }
 
        printf("\n\nDo you want to exit? (y/n) : ") ;
@@ -105,3 +131,5 @@ int main()
 }
 return 0;
 }
+
+
