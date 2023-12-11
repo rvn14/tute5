@@ -45,7 +45,7 @@ int main()
         sum = 0 ;
         for (int j = 0; j < 8; j++)
         {
-            sum += table[i][j]; 
+            sum += table[i][j]*xlist[j]; 
             
         }
         ylist[i] = sum ;

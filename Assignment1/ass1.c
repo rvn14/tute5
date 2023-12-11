@@ -11,7 +11,7 @@ int main()
     int coinCount[] = {5, 5, 5, 5};
     int stampCount[] = {5, 5, 5};
     int chngCoins[] = {0, 0, 0, 0};
-    char userinp[1];
+    char userInp[1];
 
     
     
@@ -21,10 +21,10 @@ int main()
         printf("\nEnter the amount of tendering: ");
         scanf("%d", &tenderedAmount);
 
-        printf("\nEnter the value of the stamp (50, 25, 10): ");
+        printf("\nEnter the value of the stamp (25, 15, 10): ");
         scanf("%d", &stampValue);
 
-        if (stampValue != 50 && stampValue != 25 && stampValue != 10)
+        if (stampValue != 25 && stampValue != 15 && stampValue != 10)
         {
             printf("\nError! Invalid Stamp value entered\nCoin returned.");
         }
@@ -39,6 +39,19 @@ int main()
         else
         {
             dispensedStamp = stampValue;
+            switch (dispensedStamp)
+            {
+            case 25:
+                stampCount[0]-1;
+                break;
+            case 15:
+                stampCount[1] - 1;
+                break;
+            case 10:
+                stampCount[2] - 1;
+                break;
+            
+            }
             change = (tenderedAmount - stampValue);
 
             printf("\n\nA Rs.%d.00 stamp has been dispensed\n", dispensedStamp);
@@ -53,14 +66,28 @@ int main()
                 if (chngCoins[i] > 0)
                 {
                     printf("\nChange from %d coins : %d", coins[i], chngCoins[i]);
-                }
+                    switch (coins[i])
+                    {
+                    case 50:
+                        coinCount[0] - 1;
+                        break;
+                    case 25:
+                        coinCount[1] - 1;
+                        break;
+                    case 15:
+                        coinCount[2] - 1;
+                        break;
+                    case 5:
+                        coinCount[3] - 1;
+                        break;
+                    }
             }
         }
 
        printf("\n\nDo you want to exit? (y/n) : ") ;
-       scanf("%s", &userinp);
+       scanf("%s", &userInp);
 
-       if (userinp[0] == 121)
+       if (userInp[0] == 121)
        {
         printf("\nVender turning off.....");
         break;
@@ -74,5 +101,7 @@ int main()
     
 
 
-    return 0;
+    
+}
+return 0;
 }
