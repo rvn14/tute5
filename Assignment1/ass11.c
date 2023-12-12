@@ -8,7 +8,7 @@ int main()
 
     int stampValue, tenderedAmount, dispensedStamp, change;
     int coins[] = {50, 25, 10, 5};
-    int coinCount[] = {5, 0, 5, 5};
+    int coinCount[] = {5, 5, 5, 5};
     int stampCount[] = {5, 5, 5};
     int chngCoins[] = {0, 0, 0, 0};
     char userInp[1];
@@ -176,3 +176,4 @@ int main()
 
     return 0;
 }
+

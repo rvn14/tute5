@@ -8,8 +8,8 @@ int main()
 
     int table[10][10], xlist[10], ylist[10], sum, m, n;
 
-    printf("Enter size of the matrix A: ");
-    scanf("%d*%d", &m, &n);
+    printf("Enter size of the matrix A (<> <>): ");
+    scanf("%d %d", &m, &n);
 
 
     for (int i = 0; i < m; i++)
@@ -28,12 +28,12 @@ int main()
     printf("\nEnter X: \n");
     for (int i = 0; i < n; i++)
     {
-        printf("Enter %dth value", i+1);
+        printf("Enter %dth value: ", i+1);
         scanf("%d", &xlist[i]);
     }
     
 
-    printf("Table A\n");
+    printf("\nTable A\n");
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
