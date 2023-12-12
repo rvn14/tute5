@@ -6,7 +6,7 @@
 int main()
 {
 
-    int table[10][10], xlist[10], ylist[6], sum, m, n;
+    int table[10][10], xlist[10], ylist[10], sum, m, n;
 
     printf("Enter size of the matrix A: ");
     scanf("%d*%d", &m, &n);

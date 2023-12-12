@@ -101,6 +101,7 @@ int main()
             {
                 printf("\n\nA Rs.%d.00 stamp has been dispensed\n", dispensedStamp);
             }
+            
 
             if ((coinCount[0] == 0) || (coinCount[1] == 0) || ((coinCount[2] == 0)) || (coinCount[3] == 0))
             {
@@ -121,8 +122,7 @@ int main()
                     coinCount[3]--;
                     break;
                 }
-            }
-            else
+            }else
             {
                 printf("\nYour change is Rs.%d.00\n", change);
 
@@ -152,7 +152,11 @@ int main()
                     }
                 }
             }
+            
 
+            
+
+            
             printf("\n");
             for (int i = 0; i < 4; i++)
             {
