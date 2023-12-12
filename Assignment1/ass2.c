@@ -6,24 +6,37 @@
 int main()
 {
 
-    int table[10][10], xlist[10], ylist[6], sum;
+    int table[10][10], xlist[10], ylist[6], sum, m, n;
+
+    printf("Enter size of the matrix A: ");
+    scanf("%d*%d", &m, &n);
 
 
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < m; i++)
     {
-        printf("\nEnter %dst line: ",(i+1));
-        scanf("%d %d %d %d %d %d %d %d", &table[i][0], &table[i][1], &table[i][2], &table[i][3], &table[i][4], &table[i][5], &table[i][6], &table[i][7]);
+        printf("\nEnter %dst line\n",(i+1));
+        for (int j = 0; j < n; j++)
+        {
+            printf("Enter value for %d*%d: ", i+1, j+1);
+            scanf("%d",&table[i][j]);
+        }
+        
 
     }
 
 
-    printf("\nEnter X: ");
-    scanf("%d %d %d %d %d %d %d %d", &xlist[0], &xlist[1], &xlist[2], &xlist[3], &xlist[4], &xlist[5], &xlist[6], &xlist[7]);
+    printf("\nEnter X: \n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter %dth value", i+1);
+        scanf("%d", &xlist[i]);
+    }
+    
 
     printf("Table A\n");
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < m; i++)
     {
-        for (int j = 0; j < 8; j++)
+        for (int j = 0; j < n; j++)
         {
             printf("| ");
             printf("%d | ", table[i][j]);
@@ -32,7 +45,7 @@ int main()
     }
 
     printf("\nList X\n");
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("| ");
         printf("%d |", xlist[i]);
@@ -40,10 +53,10 @@ int main()
 
     printf("\nElements of Y\n");
 
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < m; i++)
     {
         sum = 0 ;
-        for (int j = 0; j < 8; j++)
+        for (int j = 0; j < n; j++)
         {
             sum += table[i][j]*xlist[j]; 
             
@@ -51,10 +64,13 @@ int main()
         ylist[i] = sum ;
         printf("Y[%d] = %d\n", i+1, ylist[i]);
     }
-    
 
-    
-    
+    printf("\nList Y\n");
+    for (int i = 0; i < m; i++)
+    {
+        printf("| ");
+        printf("%d |", ylist[i]);
+    }
 
             return 0;
 }
