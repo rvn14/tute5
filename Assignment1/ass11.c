@@ -14,13 +14,12 @@ int main()
     int chngCoins[] = {0, 0, 0, 0};
     char userInp[1];
 
-    while (1 > 0)
+    while (1)
     {
         
-
         printf("\nEnter the value of the stamp (25, 15, 10): ");
         scanf("%d", &stampValue);
-
+                                                                                            
         if (stampValue != 25 && stampValue != 15 && stampValue != 10)
         {
             printf("\nError! Invalid Stamp value entered.");

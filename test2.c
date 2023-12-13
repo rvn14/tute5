@@ -6,7 +6,7 @@ int main()
     int coin, change, x;
     int stamp_price;
     int s_10 = 5, s_15 = 5, s_25 = 5;
-    int coin_5 = 5, coin_10 = 5, coin_25 = 5, coin_50 = 5;
+    int coin_5 = 5, coin_10 = 5, coin_25 = 0, coin_50 = 5;
     char a[2];
 
     while (1 > 0)
@@ -27,25 +27,39 @@ int main()
                         change = coin - stamp_price;
                         if (change == 40)
                         {
-                            printf("\nchange = 25 coin + 10 coin + 5 coin\n\n");
-                            printf("Remaining 50 coins: %d\n", ++coin_50);
-                            printf("Remaining 25 coins: %d\n", --coin_25);
-                            printf("Remaining 10 coins: %d\n", --coin_10);
-                            printf("Remaining 05 coins: %d\n", --coin_5);
-                            printf("Remaining 10 stamps: %d\n", --s_10);
-                            printf("Remaining 15 stamps: %d\n", s_15);
-                            printf("Remaining 25 stamps: %d\n\n", s_25);
+                            if (coin_5 != 0 || coin_10 != 0 || coin_25 != 0)
+                            {
+                                printf("\nchange = 25 coin + 10 coin + 5 coin\n\n");
+                                printf("Remaining 50 coins: %d\n", ++coin_50);
+                                printf("Remaining 25 coins: %d\n", --coin_25);
+                                printf("Remaining 10 coins: %d\n", --coin_10);
+                                printf("Remaining 05 coins: %d\n", --coin_5);
+                                printf("Remaining 10 stamps: %d\n", --s_10);
+                                printf("Remaining 15 stamps: %d\n", s_15);
+                                printf("Remaining 25 stamps: %d\n\n", s_25);
+                            }
+                            else
+                            {
+                                printf("No change available");
+                            }
                         }
                         else if (change == 15)
                         {
-                            printf("\nchange = 10 coin + 5 coin\n\n");
-                            printf("Remaining 50 coins: %d\n", coin_50);
-                            printf("Remaining 25 coins: %d\n", ++coin_25);
-                            printf("Remaining 10 coins: %d\n", --coin_10);
-                            printf("Remaining 05 coins: %d\n", --coin_5);
-                            printf("Remaining 10 stamps: %d\n", --s_10);
-                            printf("Remaining 15 stamps: %d\n", s_15);
-                            printf("Remaining 25 stamps: %d\n\n", s_25);
+                            if (coin_5 != 0 || coin_10 != 0)
+                            {
+                                printf("\nchange = 10 coin + 5 coin\n\n");
+                                printf("Remaining 50 coins: %d\n", coin_50);
+                                printf("Remaining 25 coins: %d\n", ++coin_25);
+                                printf("Remaining 10 coins: %d\n", --coin_10);
+                                printf("Remaining 05 coins: %d\n", --coin_5);
+                                printf("Remaining 10 stamps: %d\n", --s_10);
+                                printf("Remaining 15 stamps: %d\n", s_15);
+                                printf("Remaining 25 stamps: %d\n\n", s_25);
+                            }
+                            else
+                            {
+                                printf("No change available");
+                            }
                         }
                         else if (change == 0)
                         {
@@ -65,25 +79,39 @@ int main()
                         change = coin - stamp_price;
                         if (change == 35)
                         {
-                            printf("\nchange = 25 coin + 10 coin\n\n");
-                            printf("Remaining 50 coins: %d\n", ++coin_50);
-                            printf("Remaining 25 coins: %d\n", --coin_25);
-                            printf("Remaining 10 coins: %d\n", --coin_10);
-                            printf("Remaining 05 coins: %d\n", coin_5);
-                            printf("Remaining 10 stamps: %d\n", s_10);
-                            printf("Remaining 15 stamps: %d\n", --s_15);
-                            printf("Remaining 25 stamps: %d\n\n", s_25);
+                            if (coin_10 != 0 || coin_25 != 0)
+                            {
+                                printf("\nchange = 25 coin + 10 coin\n\n");
+                                printf("Remaining 50 coins: %d\n", ++coin_50);
+                                printf("Remaining 25 coins: %d\n", --coin_25);
+                                printf("Remaining 10 coins: %d\n", --coin_10);
+                                printf("Remaining 05 coins: %d\n", coin_5);
+                                printf("Remaining 10 stamps: %d\n", s_10);
+                                printf("Remaining 15 stamps: %d\n", --s_15);
+                                printf("Remaining 25 stamps: %d\n\n", s_25);
+                            }
+                            else
+                            {
+                                printf("No change available");
+                            }
                         }
                         else
                         {
-                            printf("\nchange = 10 coin\n\n");
-                            printf("Remaining 50 coins: %d\n", coin_50);
-                            printf("Remaining 25 coins: %d\n", ++coin_25);
-                            printf("Remaining 10 coins: %d\n", --coin_10);
-                            printf("Remaining 05 coins: %d\n", coin_5);
-                            printf("Remaining 10 stamps: %d\n", s_10);
-                            printf("Remaining 15 stamps: %d\n", --s_15);
-                            printf("Remaining 25 stamps: %d\n\n", s_25);
+                            if (coin_10 != 0)
+                            {
+                                printf("\nchange = 10 coin\n\n");
+                                printf("Remaining 50 coins: %d\n", coin_50);
+                                printf("Remaining 25 coins: %d\n", ++coin_25);
+                                printf("Remaining 10 coins: %d\n", --coin_10);
+                                printf("Remaining 05 coins: %d\n", coin_5);
+                                printf("Remaining 10 stamps: %d\n", s_10);
+                                printf("Remaining 15 stamps: %d\n", --s_15);
+                                printf("Remaining 25 stamps: %d\n\n", s_25);
+                            }
+                            else
+                            {
+                                printf("No change available");
+                            }
                         }
                     }
 
@@ -92,18 +120,25 @@ int main()
                         change = coin - stamp_price;
                         if (change == 25)
                         {
-                            printf("\nchange = 25 coin\n\n");
-                            printf("Remaining 50 coins: %d\n", ++coin_50);
-                            printf("Remaining 25 coins: %d\n", --coin_25);
-                            printf("Remaining 10 coins: %d\n", coin_10);
-                            printf("Remaining 05 coins: %d\n", coin_5);
-                            printf("Remaining 10 stamps: %d\n", s_10);
-                            printf("Remaining 15 stamps: %d\n", s_15);
-                            printf("Remaining 25 stamps: %d\n\n", --s_25);
+                            if (coin_25 != 0)
+                            {
+                                printf("\nchange = 25 coin\n\n");
+                                printf("Remaining 50 coins: %d\n", ++coin_50);
+                                printf("Remaining 25 coins: %d\n", --coin_25);
+                                printf("Remaining 10 coins: %d\n", coin_10);
+                                printf("Remaining 05 coins: %d\n", coin_5);
+                                printf("Remaining 10 stamps: %d\n", s_10);
+                                printf("Remaining 15 stamps: %d\n", s_15);
+                                printf("Remaining 25 stamps: %d\n\n", --s_25);
+                            }
+                            else
+                            {
+                                printf("No change available");
+                            }
                         }
                         else
                         {
-                            printf("\nchange = 0\n\n");
+                            printf("\nNo change available\n\n");
                             printf("Remaining 50 coins: %d\n", coin_50);
                             printf("Remaining 25 coins: %d\n", ++coin_25);
                             printf("Remaining 10 coins: %d\n", coin_10);
@@ -126,9 +161,8 @@ int main()
         }
         else
         {
-            printf("\nInvalid values\n\n");
+            printf("\nInvalid value\n\n");
         }
-
         printf("\nDo you want to quit? Enter y or n\n");
         scanf("%s", a);
 
@@ -137,6 +171,5 @@ int main()
             exit(0);
         }
     }
-
     return 0;
 }
