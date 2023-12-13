@@ -1,1 +1,1 @@
-printf("\nChange from %d coins : %d", coins[i], chngCoins[i]);
+            loop:

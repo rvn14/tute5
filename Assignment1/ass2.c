@@ -6,18 +6,19 @@
 int main()
 {
 
-    int table[10][10], xlist[10], ylist[10], sum, m, n;
+    int sum, m, n;
 
-    printf("Enter size of the matrix A (<> <>): ");
-    scanf("%d %d", &m, &n);
+    printf("Enter size of the matrix A (mxn): ");
+    scanf("%dx%d", &m, &n);
 
+    int table[m][n], xlist[n], ylist[n];
 
     for (int i = 0; i < m; i++)
     {
         printf("\nEnter %dst line\n",(i+1));
         for (int j = 0; j < n; j++)
         {
-            printf("Enter value for %d*%d: ", i+1, j+1);
+            printf("Enter value for %dx%d: ", i+1, j+1);
             scanf("%d",&table[i][j]);
         }
         
