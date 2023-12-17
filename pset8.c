@@ -1,35 +1,56 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <math.h>
 
 int main()
 {
+    
+    float a, b, c, discriminant, root1, root2;
 
-    int a, b, c;
+    
+    printf("Enter the values of a, b, and c: ");
+    scanf("%f %f %f", &a, &b, &c);
 
-    printf("Enter values for a, b, c: ");
-    scanf("%d %d %d",&a,&b,&c);
-
-    if ( b == 0 && a == 0 )
+    
+    if (a == 0)
     {
-        printf("There is no solutiongit");
-    }else if (a == 0)           
-    {
-        printf(" There is only one root");
-    }else if (((b^2)-(4*a*c)) < 0)
-    {
-        printf("There are no roots");
-    }else
-    {
-        printf("there are two real roots");
+    
+        if (b == 0)
+        {
+            
+            printf("No solution.\n");
+        }
+        else
+        {
+            
+            root1 = -c / b;
+            printf("Single root: %f\n", root1);
+        }
     }
-    
-    
-    
-    
-    
+    else
+    {
+        
+        discriminant = b * b - 4 * a * c;
 
+        
+        if (discriminant < 0)
+        {
+            
+            printf("No real roots.\n");
+        }
+        else if (discriminant == 0)
+        {
+            
+            root1 = -b / (2 * a);
+            printf("Single root: %f\n", root1);
+        }
+        else
+        {
+            
+            root1 = (-b + sqrt(discriminant)) / (2 * a);
+            root2 = (-b - sqrt(discriminant)) / (2 * a);
+            printf("Two real roots: %f and %f\n", root1, root2);
+        }
+    }
 
     return 0;
 }
