@@ -26,6 +26,8 @@ void runVender()
     printf("\nEnter the value of the stamp (25, 15, 10): ");
     scanf("%d", &stampValue);
 
+    
+
     switch (stampValue)
     {
     case 25:
@@ -44,15 +46,14 @@ void runVender()
         }
 
         break;
-    case 10:
+    case 10 :
         if (stampCount[0] <= 0)
         {
             printf("Stamps of Rs.10 not available");
             return;
         }
         break;
-    default:
-    {
+    default:{
         printf("Invalid Stamp value requested");
         return;
     }
@@ -176,14 +177,24 @@ void runVender()
     }
 }
 
+
+
+
+
 int main()
 {
-
+    
     char userInp;
+
+
+
+    
+
 
     while (1)
     {
-
+        
+        
         runVender();
 
         printf("\nDo you want to perform another transaction? (y/n): ");
@@ -193,7 +204,17 @@ int main()
         {
             break;
         }
+        
     }
+    
+
+
+
+
+
+
+
+
 
     return 0;
 }

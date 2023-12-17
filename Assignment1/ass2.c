@@ -6,10 +6,29 @@
 int main()
 {
 
-    int sum, m, n;
+    int sum = 0, m, n;
 
-    printf("Enter size of the matrix A (mxn): ");
-    scanf("%dx%d", &m, &n);
+
+
+    while (1)
+    {
+        printf("Enter size of the matrix A (m n): ");
+        scanf("%d %d", &m, &n);
+
+        if (m>0 && n>0)
+        {
+            
+            break;
+        }
+        printf("\nOnly enter positive values!\n");
+    }
+    
+
+        
+
+    
+
+    
 
     int table[m][n], xlist[n], ylist[n];
 
@@ -29,7 +48,7 @@ int main()
     printf("\nEnter X: \n");
     for (int i = 0; i < n; i++)
     {
-        printf("Enter %dth value: ", i+1);
+        printf("Enter value for %dx1: ", i+1);
         scanf("%d", &xlist[i]);
     }
     
@@ -48,8 +67,8 @@ int main()
     printf("\nList X\n");
     for (int i = 0; i < n; i++)
     {
-        printf("| ");
-        printf("%d |", xlist[i]);
+        
+        printf("| %d |", xlist[i]);
     }
 
     printf("\nElements of Y\n");

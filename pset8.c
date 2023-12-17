@@ -14,7 +14,20 @@ int main()
     if ( b == 0 && a == 0 )
     {
         printf("There is no solutiongit");
+    }else if (a == 0)           
+    {
+        printf(" There is only one root");
+    }else if (((b^2)-(4*a*c)) < 0)
+    {
+        printf("There are no roots");
+    }else
+    {
+        printf("there are two real roots");
     }
+    
+    
+    
+    
     
 
 
